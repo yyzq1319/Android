@@ -1,1 +1,1 @@
-/home/cym/4412/develop/jingyingban/iTop4412_uboot/cpu/arm_cortexa9/s5pc210/cpu_init_SCP.S
+/home/hian/iTOP-4412/Android/iTop4412_uboot/cpu/arm_cortexa9/s5pc210/cpu_init_SCP.S
