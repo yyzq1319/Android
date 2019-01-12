@@ -370,7 +370,8 @@ if ($hz eq '--can') {
 	}
 
 	@val = @{$canned_values{$hz}};
-	if (!defined(@val)) {
+	# 解决ubuntu16.04编译不过的问题
+	if (!(@val)) {               
 		@val = compute_values($hz);
 	}
 	output($hz, @val);

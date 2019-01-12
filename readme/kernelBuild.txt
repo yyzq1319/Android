@@ -1,0 +1,3 @@
+1、执行命令cp config_for_android_scp_elite .config覆盖原来的配置文件
+2、make zImage
+
