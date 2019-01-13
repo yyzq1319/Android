@@ -661,6 +661,12 @@ config MAX485_CTL
         help
           Enable MAX485 pin config
 
+config HELLO_CTL
+        bool "Enable HELLO config"
+        default y
+        help
+          Enable HELLO config
+
 config LEDS_CTL
         bool "Enable LEDS config"
         default y

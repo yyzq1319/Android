@@ -2694,6 +2694,13 @@ struct platform_device s3c_device_max485_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HELLO_CTL
+struct platform_device s3c_device_hello_ctl = {
+        .name   = "hello_ctl",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_LEDS_CTL
 struct platform_device s3c_device_leds_ctl = {
         .name   = "leds",
@@ -3026,6 +3033,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_MAX485_CTL
 	&s3c_device_max485_ctl ,
+#endif
+
+#ifdef CONFIG_HELLO_CTL
+	&s3c_device_hello_ctl,
 #endif
 
 #ifdef CONFIG_LEDS_CTL
