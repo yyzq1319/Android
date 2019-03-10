@@ -2708,6 +2708,13 @@ struct platform_device s3c_device_leds_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_LEDS_CTL
+struct platform_device s3c_device_hian_leds_ctl = {
+        .name   = "hian_leds",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3041,6 +3048,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_LEDS_CTL
 	&s3c_device_leds_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_LEDS_CTL
+	&s3c_device_hian_leds_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL
