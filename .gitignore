@@ -26,4 +26,6 @@
 *.tmp_vmlinux1
 *.tmp_vmlinux2
 *hian
+*config
+*config.old
 

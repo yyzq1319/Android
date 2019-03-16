@@ -679,6 +679,12 @@ config HIAN_LEDS_CTL
         help
           Enable HIAN LEDS config
 
+config HIAN_MODULE_PARAM_CTL
+        bool "Enable HIAN MODULE PARAM config"
+        default y
+        help
+          Enable HIAN MODULE PARAM config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n
