@@ -13,7 +13,7 @@
 int leds(int num, int cmd)
 {
 	int fd;
-   	char *leds = "/dev/hian_leds";
+   	char *leds;
 
     /*两个灯，分别为0和1 */
     if(num >= LED_NUM)
@@ -28,8 +28,18 @@ int leds(int num, int cmd)
 		printf("led cmd error!\r\n");
 		exit(1);
     }
-
-    if((fd = open(leds,O_RDWR|O_NOCTTY|O_NDELAY))<0)
+	
+	if(num == 0)
+	{
+		leds = "/dev/hian_leds0";
+	}
+	else if(num == 1)
+	{
+		leds = "/dev/hian_leds0";
+		
+	}
+    
+	if((fd = open(leds,O_RDWR|O_NOCTTY|O_NDELAY))<0)
     {
 		printf("open %d fail!\r\n",fd);
 		exit(1);
