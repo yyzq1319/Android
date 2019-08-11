@@ -2722,6 +2722,13 @@ struct platform_device s3c_device_hian_module_param_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_KEY_IRQ_CTL
+struct platform_device s3c_device_hian_key_irq_ctl = {
+        .name   = "hian_key_irq",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3063,6 +3070,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_HIAN_MODULE_PARAM_CTL
 	&s3c_device_hian_module_param_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_KEY_IRQ_CTL
+	&s3c_device_hian_key_irq_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL

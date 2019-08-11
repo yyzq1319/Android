@@ -685,6 +685,12 @@ config HIAN_MODULE_PARAM_CTL
         help
           Enable HIAN MODULE PARAM config
 
+config HIAN_KEY_IRQ_CTL
+        bool "Enable HIAN KEY IRQ config"
+        default y
+        help
+          Enable HIAN KEY IRQ config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n
