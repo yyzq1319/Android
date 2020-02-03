@@ -691,6 +691,12 @@ config HIAN_KEY_IRQ_CTL
         help
           Enable HIAN KEY IRQ config
 
+config HIAN_GPIO_INPUT_CTL
+        bool "Enable HIAN GPIO INPUT config"
+        default y
+        help
+          Enable HIAN GPIO INPUT config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n

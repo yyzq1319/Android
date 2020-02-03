@@ -1995,7 +1995,7 @@ void init_lcd_type()
                 s3c_gpio_setpull(EXYNOS4_GPC0(3), S3C_GPIO_PULL_NONE);
                 s3c_gpio_cfgpin(EXYNOS4_GPC0(3), S3C_GPIO_SFN(0));
                 gpio_direction_input(EXYNOS4_GPC0(3));
-                //gpio_free(EXYNOS4_GPC0(3));
+                gpio_free(EXYNOS4_GPC0(3));
         }
 
 	if(gpio_request(EXYNOS4_GPX0(6), "GPX0_6"))
@@ -2004,7 +2004,7 @@ void init_lcd_type()
                 s3c_gpio_setpull(EXYNOS4_GPX0(6), S3C_GPIO_PULL_NONE);
                 s3c_gpio_cfgpin(EXYNOS4_GPX0(6), S3C_GPIO_SFN(0));
                 gpio_direction_input(EXYNOS4_GPX0(6));
-                //gpio_free(EXYNOS4_GPX0(6));
+                gpio_free(EXYNOS4_GPX0(6));
         }
 }
 
@@ -2729,6 +2729,13 @@ struct platform_device s3c_device_hian_key_irq_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_GPIO_INPUT_CTL
+struct platform_device s3c_device_hian_gpio_input_ctl = {
+        .name   = "hian_gpio_input",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3074,6 +3081,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_HIAN_KEY_IRQ_CTL
 	&s3c_device_hian_key_irq_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_GPIO_INPUT_CTL
+	&s3c_device_hian_gpio_input_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL
