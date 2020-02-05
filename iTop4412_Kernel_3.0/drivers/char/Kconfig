@@ -697,6 +697,12 @@ config HIAN_GPIO_INPUT_CTL
         help
           Enable HIAN GPIO INPUT config
 
+config HIAN_ATOMIC_OP_CTL
+        bool "Enable HIAN ATOMIC OP config"
+        default y
+        help
+          Enable HIAN ATOMIC OP config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n

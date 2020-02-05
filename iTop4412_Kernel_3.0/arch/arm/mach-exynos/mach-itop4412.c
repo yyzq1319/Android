@@ -2736,6 +2736,13 @@ struct platform_device s3c_device_hian_gpio_input_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_ATOMIC_OP_CTL
+struct platform_device s3c_device_hian_atomic_op_ctl = {
+        .name   = "hian_atomic_op",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3085,6 +3092,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_HIAN_GPIO_INPUT_CTL
 	&s3c_device_hian_gpio_input_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_ATOMIC_OP_CTL
+	&s3c_device_hian_atomic_op_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL
