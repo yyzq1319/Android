@@ -83,6 +83,7 @@ deps_config := \
 	fs/ext3/Kconfig \
 	fs/ext2/Kconfig \
 	fs/Kconfig \
+	drivers/hian_kernel_driver_test/Kconfig \
 	drivers/topeet/Kconfig \
 	drivers/mtk_wcn_combo/Kconfig \
 	drivers/unaplus/Kconfig \

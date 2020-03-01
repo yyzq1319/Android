@@ -126,4 +126,5 @@ obj-$(CONFIG_HWSPINLOCK)	+= hwspinlock/
 #add by cym 20130301
 obj-$(CONFIG_MTK_COMBO)         += mtk_wcn_combo/
 #obj-y				+= topeet/
+obj-y += hian_kernel_driver_test/
 #end add
