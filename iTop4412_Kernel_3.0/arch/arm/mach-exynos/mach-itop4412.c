@@ -2743,6 +2743,13 @@ struct platform_device s3c_device_hian_atomic_op_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_WDT_CTL
+struct platform_device s3c_device_hian_wdt_ctl = {
+        .name   = "hian_wdt",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3096,6 +3103,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_HIAN_ATOMIC_OP_CTL
 	&s3c_device_hian_atomic_op_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_WDT_CTL
+	&s3c_device_hian_wdt_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL

@@ -703,6 +703,12 @@ config HIAN_ATOMIC_OP_CTL
         help
           Enable HIAN ATOMIC OP config
 
+config HIAN_WDT_CTL
+        bool "Enable HIAN WDT OP config"
+        default y
+        help
+          Enable HIAN WDT OP config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n
