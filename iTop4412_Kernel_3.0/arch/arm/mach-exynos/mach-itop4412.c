@@ -2750,6 +2750,13 @@ struct platform_device s3c_device_hian_wdt_ctl = {
 };
 #endif
 
+#ifdef CONFIG_HIAN_DEBUG_CTL
+struct platform_device s3c_device_hian_debug_ctl = {
+        .name   = "hian_debug",
+        .id             = -1,
+};
+#endif
+
 #ifdef CONFIG_BUZZER_CTL
 struct platform_device s3c_device_buzzer_ctl = {
         .name   = "buzzer_ctl",
@@ -3107,6 +3114,10 @@ static struct platform_device *smdk4x12_devices[] __initdata = {
 
 #ifdef CONFIG_HIAN_WDT_CTL
 	&s3c_device_hian_wdt_ctl,
+#endif
+
+#ifdef CONFIG_HIAN_DEBUG_CTL
+	&s3c_device_hian_debug_ctl,
 #endif
 
 #ifdef CONFIG_BUZZER_CTL

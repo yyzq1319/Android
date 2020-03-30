@@ -709,6 +709,12 @@ config HIAN_WDT_CTL
         help
           Enable HIAN WDT OP config
 
+config HIAN_DEBUG_CTL
+        bool "Enable HIAN DEBUG config"
+        default y
+        help
+          Enable HIAN DEBUG config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n
