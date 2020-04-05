@@ -715,6 +715,12 @@ config HIAN_DEBUG_CTL
         help
           Enable HIAN DEBUG config
 
+config HIAN_ADC_CTL
+        bool "Enable HIAN ADC config"
+        default y
+        help
+          Enable HIAN ADC config
+
 config BUZZER_CTL
         bool "Enable BUZZER config"
         default n
